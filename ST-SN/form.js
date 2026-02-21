@@ -3,9 +3,9 @@ let form = document.getElementById("form");
 button.addEventListener("click", function(event){
     event.preventDefault();
     let name = document.getElementById("name");
-    let phone = document.getElementById("phone").value;
+    let phone = document.getElementById("phone");
     let lName = document.getElementById("lName");
-    let email = document.getElementById("email").value;
+    let email = document.getElementById("email");
     let valid = true;
     if(name.value.length < 3){   
         alert("An error, name cannot be less than 3 characters.");
@@ -16,7 +16,7 @@ button.addEventListener("click", function(event){
         name.classList.remove("error");
         valid = true;
     }
-    else if(lName.value.length < 3){
+    if(lName.value.length < 3){
         alert("An error, last name cannot be less than 3 characters.");
         lName.classList.add("error");
         valid = false;
@@ -25,19 +25,21 @@ button.addEventListener("click", function(event){
         lName.classList.remove("error");
         valid = true;
     }
-    else if(phone[0] == 0){
+    if(phone[0] == 0){
         alert("An error, phone number cannot start with 0.");
         phone.classList.add("error");
         valid = false;
     }
     else if(phone[0] != 0){
-    phone.classList.remove("error");
+    // phone.classList.remove("error");
     valid = true;
 }
-    else if(email("@gmail.com") == false){
+    if(!email.value.includes("@gmail.com")){
         alert("An error, email must end with @gmail.com.");
         email.classList.add("error");
         valid = false;
     }
-    else{event.submit();}
+    if(valid == true){
+        form.submit();
+    }
 })
