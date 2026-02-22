@@ -25,13 +25,13 @@ button.addEventListener("click", function(event){
         lName.classList.remove("error");
         valid = true;
     }
-    if(phone[0] == 0){
+    if(phone.value[0] == 0){
         alert("An error, phone number cannot start with 0.");
         phone.classList.add("error");
         valid = false;
     }
-    else if(phone[0] != 0){
-    // phone.classList.remove("error");
+    else if(phone.value[0] != 0){
+    phone.classList.remove("error");
     valid = true;
 }
     if(!email.value.includes("@gmail.com")){
