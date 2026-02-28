@@ -20,15 +20,21 @@ button.addEventListener("click", function(event){
     alert("The letter you entered is: " + letter);
     for(let i = 0; i < trS.length; i++){ 
         let td = trS[i].querySelector('td:first-child');
-        if(td.innerText.includes(letter)){
+        if(td.innerText.includes(letter) && letter  != "" && letter != " " && letter != null && letter != undefined && !trS[i].classList.contains("highlight")){
             Word.push(td);
             trS[i].classList.add("highlight");
             alWord.push(td.innerText);
         }
-        else{
+        if (letter == "" || letter == " "){
+            trS[i].classList.remove("none");
+            trS[i].classList.remove("highlight");
+        }
+        if(trS[i].classList.contains("highlight")){
+            continue
+        }
+        if(!trS[i].classList.contains("highlight") && letter != "" && letter != " "){
             trS[i].classList.add("none");
         }
-        
     }
     alert("Found words: " + alWord);
     Word.forEach((t) => t.classList.add("highlight"));
