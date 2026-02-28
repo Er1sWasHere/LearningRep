@@ -64,3 +64,13 @@ body{
     width: 260px;
     padding: 5px;
 }
+.highlight{
+    color: black;
+    border: 3px;
+    font-family: serif;
+    width: 260px;
+    padding: 5px;
+}
+.none{
+    display: none;
+}
