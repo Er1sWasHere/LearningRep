@@ -2,63 +2,7 @@ body{
     font-family: sans-serif;
     color: grey;
 }
-#t1{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t2{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t3{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t4{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t5{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t6{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t7{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-    width: 260px;
-    padding: 5px;
-}
-#t8{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t9{
-    border: 3px;
-    border-color: black;
-    width: 260px;
-    padding: 5px;
-}
-#t10{
+tr{
     border: 3px;
     border-color: black;
     width: 260px;
@@ -73,4 +17,16 @@ body{
 }
 .none{
     display: none;
+}
+.inputs{
+    border-width: 3px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-top: 20px;
+}
+#submit{
+    border-width: 1px;
+    border-color: grey;
+    background-color: white;
 }
